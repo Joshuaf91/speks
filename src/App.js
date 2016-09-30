@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './individual-product-page.js';
+import data from 'data';
 import Nav from './nav';
 import Footer from './footer';
 import Data from './data';
+
 
 
 var HelloWorld = React.createClass({
