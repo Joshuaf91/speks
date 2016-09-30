@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import data from 'data';
+import Nav from './nav';
+import Footer from './footer';
+import Data from './data';
+
 
 var HelloWorld = React.createClass({
   render: function() {
