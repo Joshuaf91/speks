@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import data from 'data';
 
 var HelloWorld = React.createClass({
   render: function() {
