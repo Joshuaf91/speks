@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './individual-product-page.js';
+import data from 'data';
+
 
 var HelloWorld = React.createClass({
   render: function() {
