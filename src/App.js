@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Home from "home";
 import './individual-product-page.js';
 import data from 'data';
 import Nav from './nav';
