@@ -57,6 +57,8 @@
     "font-awesome": "^4.6.3",
     "react": "^15.3.2",
     "react-dom": "^15.3.1",
+    "react-image-slider": "0.0.6",
+    "react-responsive-carousel": "^3.0.21",
     "react-router": "^2.8.1"
   },
   "scripts": {

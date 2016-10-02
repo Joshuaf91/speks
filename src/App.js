@@ -1,25 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from "home";
+import Home from "./home.jsx";
 import './individual-product-page.js';
-import data from 'data';
-import Nav from './nav';
+import data from './data';
+import Nav from './nav'; 
 import Footer from './footer';
-import Data from './data';
 
 
 
-var HelloWorld = React.createClass({
+var App = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>Hello World!</h1>
+        <Home />
       </div>
     )
   }
 })
 
 ReactDOM.render(
-  <HelloWorld />,
+  <App />,
   document.getElementById('root')
 );
