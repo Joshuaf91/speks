@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Home from "./home.jsx";
+import Home from "./Home.jsx";
 // import './individual-product-page.js';
 // import data from './data';
 import Nav from './Nav'; 
 import Footer from './Footer';
+
 
 
 
@@ -13,7 +14,8 @@ var App = React.createClass({
     return (
       <div>
       	<Nav />
-        <Footer />
+        <Home />
+        <Footer/>
       </div>
     )
   }
