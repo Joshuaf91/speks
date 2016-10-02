@@ -1,8 +1,8 @@
-products: {
-    /*gender:["n",&| "m", 
+/*gender:["n",&| "m", 
     || "w"],
     material:[Metal Plastic Wood tortist colorfull],
     */
+products: {
     [{
         gender: ["n"],
         material: ["Metal"],
@@ -165,7 +165,7 @@ products: {
         description: "This line of vintage-inspired eyewear merges contemporary colors and details with distressed finishes. This medium-sized browline frame has a stainless steel brow with flexible TR90 temple arms and spring hinges for a comfortable fit. It is available in metallic brown with matte tortoiseshell temple arms.",
         imgSrc: ["http://static.zennioptical.com/images/product/19/89/198915_lg.jpg"],
         popularity: 0,
-    }],
+    }]
 }
 
 // [{
