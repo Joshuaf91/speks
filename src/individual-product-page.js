@@ -1,3 +1,4 @@
+
 import React from 'react';
 import products from './data.js';
 
@@ -14,6 +15,7 @@ var ProductPage = React.createClass({
 	},
 
 	render(){
+		console.log(products)
 		return(
 			<div className="text-center">
 				<div className='row'><h3 className='col-xs-12'>{this.state.heading}</h3></div>

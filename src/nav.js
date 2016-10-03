@@ -1,4 +1,5 @@
 import React from'react';
+import {Link} from 'react-router';
 
 var Nav = React.createClass({
 	
@@ -6,32 +7,32 @@ var Nav = React.createClass({
 		return(
 			<div>
 				<nav className="navbar navbar-default">
-					<div className="container-fluid">
+					<div className="container-fluid" >
 						
 						<div className="navbar-header">
-							<a className="navbar-brand nav-logo" href="#">
+							<Link to="/" className="navbar-brand nav-logo">
 								SPEKS
-							</a>
+							</Link>
 						</div>
 
 						<ul className="nav navbar-nav">
 
 							<li>
-								<a className="nav-non-binary" href="#">
+								<Link to="CategoryPage/n" className="nav-non-binary">
 									Non-Binary
-								</a>
+								</Link>
 							</li>
 
 							<li>
-								<a className="nav-women" href="#">
+								<Link to="CategoryPage/w"className="nav-women">
 									Women
-								</a>
+								</Link>
 							</li>
 
 							<li>
-								<a className="nav-men" href="#">
+								<Link to="CategoryPage/M" className="nav-men">
 									Men
-								</a>
+								</Link>
 							</li>
 
 						</ul>

@@ -4,15 +4,24 @@ import products from './data.js';
 var CategoryPage = React.createClass({
 
 	render(){
-		var newArr = products.map(function(val,i){
+		var newArr = products.map((val,i) => {
 			console.log(val);
-			if(val.indexOF(this.props.params.gender) > -1){
-				return val;
+			if(val.gender.indexOf(this.props.params.gender) > -1){
+				return <div className='col-md-5'>{val.gender +
+												//val.material+
+												val.productName +
+												val.price+
+												val.color+
+												//val.description +
+												<img src={val.imgSrc} />}
+						</div>
 			}else{
 				return undefined
 			}
 			// this.props.params.category
 		})
+		console.log(newArr);
+
 			return(
 					<div>
 							<div className='row'>
@@ -23,8 +32,7 @@ var CategoryPage = React.createClass({
 										<li>Popularity</li>
 									</ul>
 								</div>
-								<div className='col-md-5'></div>
-								<div className='col-md-5'></div>
+								{newArr}
 							</div>
 					</div>
 				)

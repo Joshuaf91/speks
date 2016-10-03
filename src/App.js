@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, IndexRoute, Route, hashHistory} from 'react-router';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import ProductPage from './individual-product-page.js';
@@ -15,7 +16,7 @@ var App = React.createClass({
     return (
       <div>
       	<Nav />
-        <Home />
+        {this.props.children}
         <Footer/>
       </div>
     )
@@ -23,6 +24,11 @@ var App = React.createClass({
 })
 
 ReactDOM.render(
-  <App />,
+  <Router history={hashHistory}>
+    <Router path="/" component={App}>
+      <IndexRoute component={Home}/>
+      <Route path="/CategoryPage/:gender(/:category)" component={CategoryPage}/>
+    </Router>
+  </Router>,
   document.getElementById('root')
 );
