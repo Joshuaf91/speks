@@ -17,13 +17,11 @@ var ProductPage = React.createClass({
 	render(){
 		return(
 			<div>
-				<div className='container'>
-					<div className='row'><h3 className='col-xs-12'>{this.state.heading}</h3></div>
-					<div className='row'><img className='col-xs-12' src={this.state.picture} alt="#"/></div>
-					<div className='row'>
-						<div className='col-sm-7'><p>Description {this.state.details}</p></div>						
-						<div className='col-sm-5'><p>Price {this.state.price}</p></div>				
-					</div>
+				<div className='row'><h3 className='col-xs-12'>{this.state.heading}</h3></div>
+				<div className='row'><img className='col-xs-12' src={this.state.picture} alt="#"/></div>
+				<div className='row'>
+					<div className='col-sm-7'><p>Description {this.state.details}</p></div>						
+					<div className='col-sm-5'><p>Price {this.state.price}</p></div>				
 				</div>
 			</div>
 		)
