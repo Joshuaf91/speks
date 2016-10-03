@@ -1,7 +1,7 @@
 import React from 'react';
 import products from './data.js';
 
-var ShoppingCart = React.createClass({
+var Cart = React.createClass({
     getInitialState: function () {
     return {data: null}
     },
