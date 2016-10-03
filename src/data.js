@@ -32,7 +32,7 @@ var products = [
         price: 35.95,
         color: ["Gold"],
         description: "We love these fashionable round glasses with rose gold mirror tint but they pretty much look great with any tint. The medium-wide frame has patterned rims and temple arms in a shiny gold metal finish. Sunglasses are pictured with 80% gray tint with rose gold mirror finish.",
-        imgSrc: "http://static.zennioptical.com/images/product/15/73/157314_lg.jpg",
+        imgSrc: ["http://static.zennioptical.com/images/product/15/73/157314_lg.jpg"],
         popularity: 0
     },
     {
