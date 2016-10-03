@@ -1,6 +1,5 @@
 import React from 'react'
 import products from './data.js';
-import 'bootstrap/dist/css/bootstrap.css';
 
 var CategoryPage = React.createClass({
 	render(){
