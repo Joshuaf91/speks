@@ -1,7 +1,26 @@
-.body{
-  text-align: center;
+
+body {
+  margin: 10px 20px 10px 20px;
+  padding: 0;
+  font-family: sans-serif;
+}  
+
+#root {
+    width: 960px;
+    margin: 1px auto 1px auto;
 }
 
+#home-image {
+    width: 960px;
+}
+
+<<<<<<< HEAD
+=======
+#second-nav-bar {
+    width: 960px;
+}
+
+>>>>>>> 3ac96545a3bfdbfdb27e87ba53584dbb6f6c44d9
 .App {
     text-align: center;
 }
@@ -23,6 +42,7 @@
 }
 
 .second-nav-bar {
+    width: 960px;
     margin-top: -20px;
     background-color: #777;
     color: #FFF;
