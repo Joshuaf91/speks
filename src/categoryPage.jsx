@@ -2,7 +2,9 @@ import React from 'react'
 import products from './data.js';
 
 var CategoryPage = React.createClass({
+	
 	render(){
+		console.log(this.props.params);
 			return(
 					<div>
 							<div className='row'>
