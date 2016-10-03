@@ -10,8 +10,8 @@ var ProductPage = React.createClass({
 	render(){
 		return(
 			<div>
-				<h3>{products.productName}</h3>
-				<img src={products.imgSrc}/>
+				<h3>{products[0].productName}</h3>
+				<img src={products[0].imgSrc[0]} alt="#"/>
 				<button>Details</button>
 				<button>Price</button>
 			</div>

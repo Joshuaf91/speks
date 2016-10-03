@@ -3,8 +3,7 @@
     || "w"],
     material:[Metal Plastic Wood tortist colorfull],
     */
-
-products: {
+var products = [
     [{
         gender: ["n"],
         material: ["Metal"],
@@ -17,7 +16,6 @@ products: {
         ],
         popularity: 0
     }],
-
     [{
         gender: ["n"],
         material: ["Metal"],
@@ -168,7 +166,9 @@ products: {
         imgSrc: ["http://static.zennioptical.com/images/product/19/89/198915_lg.jpg"],
         popularity: 0
     }]
-}
+]
+
+export default products;
 
 // [{
 //     gender: ["n"],

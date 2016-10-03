@@ -1,24 +1,62 @@
-.App {
+.body{
   text-align: center;
+}
+.App {
+    text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
+}
+
+.second-nav-bar {
+    margin-top: -20px;
+    background-color: #777;
+    color: #FFF;
+}
+
+.non-binary-nav-bar-metal:hover {
+    background-color: #FFF;
+    color: #777;
+}
+
+.non-binary-nav-bar-plastic:hover {
+    background-color: #FFF;
+    color: #777;
+}
+
+.non-binary-nav-bar-wood:hover {
+    background-color: #FFF;
+    color: #777;
+}
+
+.non-binary-nav-bar-tortoiseshell:hover {
+    background-color: #FFF;
+    color: #777;
+}
+
+.non-binary-nav-bar-multicolor:hover {
+    background-color: #FFF;
+    color: #777;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
