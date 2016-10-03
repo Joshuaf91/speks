@@ -1,9 +1,5 @@
-import React from 'react';
-<<<<<<< HEAD
-import products from './data';
 
-var ProductPage = React.createClass({
-=======
+import React from 'react';
 import products from './data.js';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -18,7 +14,6 @@ var ProductPage = React.createClass({
 			price: products[0][0].price
 		}
 	},
->>>>>>> 8a346df900fa62bd96d84f8792781480c993e11a
 
 	render(){
 		console.log(products)
