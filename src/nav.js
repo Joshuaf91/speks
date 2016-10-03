@@ -6,7 +6,7 @@ var Nav = React.createClass({
 		return(
 			<div>
 				<nav className="navbar navbar-default">
-					<div className="container-fluid">
+					<div className="container-fluid" >
 						
 						<div className="navbar-header">
 							<a className="navbar-brand nav-logo" href="#">

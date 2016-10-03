@@ -1,17 +1,14 @@
 import React from 'react';
-import products from './data.js';
+import products from './data';
 
 var ProductPage = React.createClass({
-	// getInitialState(){
-	// 	return{
-	// 	}
-	// }
 
 	render(){
+		console.log(products)
 		return(
 			<div>
-				<h3>{products[0].productName}</h3>
-				<img src={products[0].imgSrc[0]} alt="#"/>
+				<h3>{products.productName}</h3>
+				<img src={products.imgSrc} alt="#"/>
 				<button>Details</button>
 				<button>Price</button>
 			</div>

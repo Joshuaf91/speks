@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route} from 'React-Router';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import ProductPage from './individual-product-page.js';
