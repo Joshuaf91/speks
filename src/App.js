@@ -17,7 +17,6 @@ var App = React.createClass({
       	<Nav />
         {this.props.children}
         <Footer/>
-        <ProductPage/>
       </div>
     )
   }
@@ -27,6 +26,7 @@ ReactDOM.render(
   <Router>
     <Router path="/" component={App}>
       <IndexRoute component={Home}/>
+      <Route path="/CategoryPage:gender" component={Home}/>
     </Router>
   </Router>,
   document.getElementById('root')
