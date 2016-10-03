@@ -7,9 +7,15 @@ var CategoryPage = React.createClass({
 			return(
 					<div>
 							<div className='row'>
-								<div className='col-xs-2'>hello</div>
-								<div className='col-md-5'>how</div>
-								<div className='col-md-5'>are you</div>
+								<div className='col-xs-2'>
+									<h5>Sort By:</h5>
+									<ul>
+										<li>Price</li>
+										<li>Popularity</li>
+									</ul>
+								</div>
+								<div className='col-md-5'></div>
+								<div className='col-md-5'></div>
 							</div>
 					</div>
 				)

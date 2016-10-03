@@ -6,6 +6,7 @@ import ProductPage from './individual-product-page.js';
 import Home from "./Home.jsx";
 import Nav from './nav'; 
 import Footer from './footer';
+import CategoryPage from'./categoryPage'
 
 
 
@@ -14,7 +15,7 @@ var App = React.createClass({
     return (
       <div>
       	<Nav />
-        <Home />
+        <CategoryPage />
         <Footer/>
         <ProductPage/>
       </div>
