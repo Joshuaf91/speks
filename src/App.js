@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
+import ProductPage from './individual-product-page.js';
 import Home from "./Home.jsx";
 import Nav from './nav'; 
 import Footer from './footer';
-// import './individual-product-page.js';
-
 
 
 
@@ -17,6 +16,7 @@ var App = React.createClass({
       	<Nav />
         <Home />
         <Footer/>
+        <ProductPage/>
       </div>
     )
   }
