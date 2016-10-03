@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import Home from "./home.jsx";
-// import './individual-product-page.js';
+import ProductPage from './individual-product-page.js';
 // import data from './data';
-import Nav from './Nav'; 
-import Footer from './Footer';
+import Nav from './nav.js'; 
+import Footer from './footer.js';
 
 
 
