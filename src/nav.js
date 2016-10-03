@@ -30,7 +30,7 @@ var Nav = React.createClass({
 							</li>
 
 							<li>
-								<Link to="CategoryPage/M" className="nav-men">
+								<Link to="CategoryPage/m" className="nav-men">
 									Men
 								</Link>
 							</li>
