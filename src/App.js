@@ -15,9 +15,8 @@ var App = React.createClass({
     return (
       <div>
       	<Nav />
-        <CategoryPage />
+        <Home />
         <Footer/>
-        <ProductPage/>
       </div>
     )
   }
