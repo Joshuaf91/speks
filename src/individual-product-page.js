@@ -18,6 +18,9 @@ var ProductPage = React.createClass({
 				<h3>{this.state.heading}</h3>
 				<img src={this.state.picture} alt="#"/>
 				<button>Description</button>
+				<h3>{products.productName}</h3>
+				<img src={products.imgSrc} alt="#"/>
+				<button>Details</button>
 				<button>Price</button>
 			</div>
 		)
