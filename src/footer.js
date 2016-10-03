@@ -1,5 +1,5 @@
-var React = require('react');
-import 'bootstrap/dist/css/bootstrap.css';
+import React from'react';
+
 
 var Footer = React.createClass({
 
