@@ -1,3 +1,9 @@
+
+/*gender:["n",&| "m", 
+    || "w"],
+    material:[Metal Plastic Wood tortist colorfull],
+    */
+
 products: {
     [{
         gender: ["n"],
