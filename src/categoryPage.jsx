@@ -2,7 +2,7 @@ import React from 'react'
 import products from './data.js';
 
 var CategoryPage = React.createClass({
-	
+
 	render(){
 		var newArr = products.map((element,index) => {
 			if(element.gender.indexOf(this.props.params.gender) > -1){
@@ -13,9 +13,15 @@ var CategoryPage = React.createClass({
 		});
 		newArr = newArr.clean(undefined).map((element,index) => {
 			if(products[element].material.indexOf(this.props.params.gender) > -1){
-				return <div className='col-md-5'></div>
+				return <div key={'frames' + index} className='col-xs-5 col-md-5 col-xl-5'>
+							<h5 className='text-center'>{products[element].productName} | <em>{products[element].price}</em></h5>
+							<img className='img-responsive' src={products[element].imgSrc[0]} alt="gaphas" />
+				 </div>
 			}else{
-				return <div className='col-md-5'><img src={products[element].imgSrc[0]} alt="gaphas" /></div>
+				return <div key={'frames' + index} className='col-xs-5 col-md-5 col-xl-5'>
+							<h5 className='text-center'>{products[element].productName} | <em>{products[element].price}</em></h5>
+							<img className='img-responsive' src={products[element].imgSrc[0]} alt="gaphas" />
+				 </div>
 			}
 		});
 		console.log(newArr);
