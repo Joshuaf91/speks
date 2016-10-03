@@ -7,8 +7,6 @@ import Home from "./Home.jsx";
 import Nav from './nav'; 
 import Footer from './footer';
 
-
-
 var App = React.createClass({
   render: function() {
     return (
