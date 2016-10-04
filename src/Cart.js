@@ -1,33 +1,13 @@
 import React from 'react';
-import products from './data.js';
-
-var CartList = React.createClass({
-    render: function() {
-        return (
-            <div>
-                Hello World
-            </div>
-        )
-    }
-})
+import data from './data.js';
 
 var Cart = React.createClass ({
     getInitialState: function(){
-        return (
-            <div>
-                products: [],
-                total: 0,
-                currency: 'USD'
-            </div>
-        )
-    },
-    addItem: function(e, products){
-        this.state.products.push(products);
-        this.totalPrice();
+        return ({products: [2,4,5,6,7]})
     },
     removeItem: function(e, productsName){
         var productsIndex;
-        this.state.products.some(function(products,index){
+        this.state.products.some(function(products, index){
             if(products.productName == productsName){
                 productsIndex = index;
                 return true;
@@ -45,16 +25,16 @@ var Cart = React.createClass ({
         this.setState({total : total})
     },
     render: function() {
-        var products = this.state.products.map(function(products){
-            return (
-                <div>
-                    <li key={products.name}> {/* Would prefer to use ID instead of name*/}
-                        <span>{products.price}</span>
-                        <CartList />
-                    </li>
-                </div>
-            )
+        var products = this.state.products.map(function(element){
+            return (<li>{data[element].productName} - {data[element].price}</li>)
         })
+        return (
+            <div>
+                <ul>
+                    {products}
+                </ul>
+            </div>
+        )
     }
 })
 
