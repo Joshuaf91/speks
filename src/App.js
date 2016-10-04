@@ -9,8 +9,6 @@ import Nav from './nav';
 import Footer from './footer';
 import CategoryPage from'./categoryPage'
 
-
-
 var App = React.createClass({
   render: function() {
     return (
