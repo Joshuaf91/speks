@@ -13,8 +13,8 @@ var Nav = React.createClass({
 		var gender = this.state.gender ? this.state.gender : "undefined";
 		return(
 			<div>
-				<nav className="navbar navbar-default">
-					<div className="container-fluid" >
+				<nav className="navbar transparent navbar-inverse">
+					<div className="container-fluid navbar-inner" >
 						
 						<div className="navbar-header">
 							<Link to="/" className="navbar-brand nav-logo">
