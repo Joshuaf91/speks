@@ -29,14 +29,17 @@ var Cart = React.createClass ({
             return ( 
                     <div className="container-fluid text-center">
                         <div className="row">
-                            <div className="col-xs-4">
+                            <div className="col-xs-3">
                                 <img src={data[element].imgSrc[0]} alt="Product Image" height="50px" />
                             </div>
-                            <div className="col-xs-4">
+                            <div className="col-xs-3">
                                 {data[element].productName}
                             </div>
-                            <div className="col-xs-4">
+                            <div className="col-xs-3">
                                 ${data[element].price}
+                            </div>
+                            <div className="col-xs-3">
+                                <button type="button" >Remove from Cart</button>
                             </div>
                         </div>
                     </div>
