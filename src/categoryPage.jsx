@@ -1,12 +1,35 @@
 import React from 'react'
 import products from './data.js';
+import {Modal} from 'react-bootstrap';
+import ProductPage from './individual-product-page.js';
+
+
 
 var CategoryPage = React.createClass({
-	takeACLoserLook(event){
-		console.log(event.target.alt);
+	getInitialState:function(){
+		return{
+			display:null,
+			showModal: false,
+			modalProduct: null
+		}
 	},
-
-	render(){
+	closeModule:function(){
+		this.setState({showModal: false,
+			modalProduct: null
+		});
+		this.displayData();
+	},
+	takeACLoserLook(event){
+		this.setState({
+			showModal: true,
+			modalProduct: [products[event.target.alt], event.target.alt]
+		})
+		this.displayData();
+	},
+	displayData: function(){
+		console.log("params",this.props.params)
+		console.log("products", products)
+		
 		var newArr = products.map((element,index) => {
 			if(element.gender.indexOf(this.props.params.gender) > -1){
 				return index
@@ -15,19 +38,30 @@ var CategoryPage = React.createClass({
 			}
 		});
 		newArr = newArr.clean(undefined).map((element,index) => {
-			if(products[element].material.indexOf(this.props.params.gender) > -1){
+			if(this.props.params.category && products[element].material.indexOf(this.props.params.category) > -1){
+				return undefined;
+			}else{
 				return <div key={'frames' + index} className='col-xs-6 col-md-6 col-xl-6'>
 							<h5 className='text-center'>{products[element].productName} | <em>{products[element].price}</em></h5>
-							<img className='img-responsive' src={products[element].imgSrc[0]} alt={element} />
-				 </div>
-			}else{
-				return <div onClick={this.takeACLoserLook} key={'frames' + index} className='col-xs-6 col-md-6 col-xl-6'>
-							<h5 className='text-center'>{products[element].productName} | <em>{products[element].price}</em></h5>
-							<img className='img-responsive' src={products[element].imgSrc[0]} alt={element} />
+							<img onClick={this.takeACLoserLook} className='img-responsive' src={products[element].imgSrc[0]} alt={element} />
+							<Modal show={this.state.showModal}>
+								<ProductPage product={this.state.modalProduct} xButton={this.closeModule}/>
+							</Modal>
 				 </div>
 			}
 		});
-			//console.log(newArr);
+		newArr.clean(undefined);
+		this.setState({display:newArr});
+	},
+	componentWillReceiveProps:function(){
+		console.log("componentWillReceiveProps")
+		this.displayData();
+	},
+	componentWillMount:function(){
+		this.displayData();
+	},
+	render(){
+		console.log("i fucking rerendered")
 			return(
 					<div>
 							<div className='container-fluid'>
@@ -39,7 +73,7 @@ var CategoryPage = React.createClass({
 									</ul>
 								</div>
 								<div className='col-xs-10 col-md-10 col-xl-10'>
-									{newArr}
+									{this.state.display}
 								</div>
 							</div>
 					</div>
