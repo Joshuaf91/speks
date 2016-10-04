@@ -2,6 +2,11 @@ body{
     margin: 0px;
 }
 
+#root{
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
 .icon{
     font-size: 40px;
     color: #4096EE;
@@ -34,6 +39,7 @@ body{
     margin-top: -40px;
     z-index: 100;
     position:relative;
+    max-width: 1220px;
 }
 
 #app-home{
@@ -41,12 +47,18 @@ body{
     z-index: 1;
 }
 
+.background-large{
+    width: 100%;
+
+}
 .container-nav{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     margin-left: 3%;
     position: relative;
+    width: 1220px;
+
 
 }
 
@@ -84,9 +96,10 @@ div.glassesImageDiv{
     width: 200px;
     height: auto;
 }
-a:hover, a:visited, a:link, a:active
+a:hover, a:visited, a:link, a:active 
 {
-    text-decoration: none;
+    text-decoration: none !important;
+    color: white !important;
 }
 #logo-black{
     display: none;
