@@ -38,7 +38,7 @@ var CategoryPage = React.createClass({
 			}
 		});
 		newArr = newArr.clean(undefined).map((element,index) => {
-			if(this.props.params.category && products[element].material.indexOf(this.props.params.category) > -1){
+			if(this.props.params.category && products[element].material.indexOf(this.props.params.category)){
 				return undefined;
 			}else{
 				return <div key={'frames' + index} className='col-xs-6 col-md-6 col-xl-6'>
