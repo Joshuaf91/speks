@@ -49,22 +49,22 @@ var Nav = React.createClass({
 					<div className="row second-nav-bar">
 
 						<div className="col-lg-1 non-binary-nav-bar-metal">
-	  						<Link to={gender + '/Metal"'} > METAL </Link></div>
+	  						<Link to={gender + '/Metal'} > METAL </Link></div>
 
 	  					<div className="col-lg-1 non-binary-nav-bar-plastic">
-	  						<Link to={gender + '/Plastic"'} >PLASTIC </Link>
+	  						<Link to={gender + '/Plastic'} >PLASTIC </Link>
 	  					</div>
 
 	  					<div className="col-lg-1 non-binary-nav-bar-wood">
-	  						<Link to={gender + '/Wood"'} >WOOD</Link>
+	  						<Link to={gender + '/Wood'} >WOOD</Link>
   						</div>
 
   						<div className="col-lg-1 non-binary-nav-bar-tortoiseshell">
-	  						<Link to={gender + '/Tortoise"'} >TORTOISE</Link>
+	  						<Link to={gender + '/Tortoise'} >TORTOISE</Link>
   						</div>
 
   						<div className="col-lg-1 non-binary-nav-bar-multicolor">
-	  						<Link to={gender + 'Multicolor'} >MULTICOLOR</Link>
+	  						<Link to={gender + '/Multicolor'} >MULTICOLOR</Link>
   						</div>
 
 					</div>
