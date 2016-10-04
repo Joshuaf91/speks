@@ -6,6 +6,7 @@ var Nav = React.createClass({
 		return({gender: null})
 	},
 	linkClick: function(gender, event){
+		//window.location() fix undefined on refresh
 		this.setState({gender: gender})
 	},
 	render: function() {
