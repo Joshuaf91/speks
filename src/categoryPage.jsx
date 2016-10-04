@@ -21,12 +21,10 @@ var CategoryPage = React.createClass({
 			}
 		});
 		newArr = newArr.clean(undefined).map((element,index) => {
-			debugger;
 			if(products[element].material.indexOf(this.props.params.category) > -1){
-				debugger;
-				return <div key={'frames' + index} className='col-xs-6 col-md-6 col-xl-6'>
+				return <div key={'frames' + index} className='col-xs-6 col-md-6 col-xl-6 glassesImageDiv'>
 							<h5 className='text-center'>{products[element].productName} | <em>{products[element].price}</em></h5>
-							<img onClick={this.takeACLoserLook} className='img-responsive' src={products[element].imgSrc[0]} alt="gaphas" />
+							<img onClick={this.takeACLoserLook} className='img-responsive glassesImage' src={products[element].imgSrc[0]} alt="gaphas" />
 				 </div>
 			}else{
 				if(this.props.params.category){
@@ -34,12 +32,12 @@ var CategoryPage = React.createClass({
 				}else{
 					return <div key={'frames' + index} className='col-xs-6 col-md-6 col-xl-6'>
 								<h5 className='text-center'>{products[element].productName} | <em>{products[element].price}</em></h5>
-								<img onClick={this.takeACLoserLook} className='img-responsive' src={products[element].imgSrc[0]} alt="gaphas" />
+								<img onClick={this.takeACLoserLook} className='img-responsive glassesImage' src={products[element].imgSrc[0]} alt="gaphas" />
 					 </div>
 				}
 			}
-			newArr.clean(undefined);
 		});
+		newArr.clean(undefined);
 		this.setState({display:newArr});
 	},
 	componentWillReceiveProps:function(){
