@@ -8,11 +8,6 @@ import Home from "./Home.jsx";
 import Nav from './nav'; 
 import Footer from './footer';
 import CategoryPage from'./categoryPage'
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a174d98e118cc6f76531eb457d9d5a6ede91d76c
 
 var App = React.createClass({
   render: function() {
