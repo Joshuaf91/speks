@@ -9,7 +9,7 @@ import Nav from './nav';
 import Footer from './footer';
 import CategoryPage from'./categoryPage';
 import NewNav from './NewNav';
-import SaleWindow from './SaleWindow';
+
 
 var App = React.createClass({
   render: function() {
@@ -21,10 +21,6 @@ var App = React.createClass({
         
         <div id="app-home">
           {this.props.children}
-        </div>
-
-        <div id="sale-window">
-          <SaleWindow />
         </div>
       </div>
     )
