@@ -7,17 +7,27 @@ import ProductPage from './individual-product-page.js';
 import Home from "./Home.jsx";
 import Nav from './nav'; 
 import Footer from './footer';
-import CategoryPage from'./categoryPage'
+import CategoryPage from'./categoryPage';
+import NewNav from './NewNav';
+import SaleWindow from './SaleWindow';
 
 
 
 var App = React.createClass({
   render: function() {
     return (
-      <div>
-      	<Nav />
-        {this.props.children}
-        <Footer/>
+      <div id="app-width">
+      	<div id="app-nav">
+          <NewNav />
+        </div>
+        
+        <div id="app-home">
+          {this.props.children}
+        </div>
+
+        <div id="sale-window">
+          <SaleWindow />
+        </div>
       </div>
     )
   }
