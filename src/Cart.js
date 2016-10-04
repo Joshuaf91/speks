@@ -27,22 +27,30 @@ var Cart = React.createClass ({
     render: function() {
         var products = this.state.products.map(function(element){
             return ( 
-                    <table className="table">
-                        <tbody>
-                            <tr className="text-center"> 
-                                <td><img src={data[element].imgSrc[0]} alt="Product Image" height="20%" /></td>
-                                <td>{data[element].productName}</td>
-                                <td>{data[element].price}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div className="container-fluid text-center">
+                        <div className="row">
+                            <div className="col-xs-4">
+                                <img src={data[element].imgSrc[0]} alt="Product Image" height="50px" />
+                            </div>
+                            <div className="col-xs-4">
+                                {data[element].productName}
+                            </div>
+                            <div className="col-xs-4">
+                                ${data[element].price}
+                            </div>
+                        </div>
+                    </div>
                 )
             })
         return (
             <div>
+                <h1>Shopping Cart</h1>
+                <hr />
                 <ul>
                     {products}
                 </ul>
+                <hr />
+                <h3 className="pull-right" id="totalPrice">Total Price: {this.totalPrice}</h3>
             </div>
         )
     }

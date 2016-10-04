@@ -19,6 +19,10 @@ body {
     width: 960px;
 }
 
+#totalPrice {
+    margin-right: 150px;
+}
+
 .App {
     text-align: center;
 }
