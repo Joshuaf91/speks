@@ -2,26 +2,6 @@ body{
     margin: 0px;
 }
 
-.icon{
-    font-size: 40px;
-    color: #4096EE;
-}
-
-#sale-window{
-    margin-top: -300px;
-}
-
-.sale-item-text{
-    font-family: Helvetica;
-    font-size: 40px;
-    font-color: #FFFFFF;
-}
-
-.sale-item-image{
-    max-width: 300px;
-    height: auto;
-}
-
 #home-background-web{
     display: block;
 }
@@ -45,8 +25,7 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-left: 3%;
-    position: relative;
+    margin-left: 4%;
 
 }
 
@@ -57,7 +36,6 @@ body{
     margin: 0;
     justify-content: center;
 }
-
 
 .nav-text{
     font-family: Helvetica;
@@ -126,17 +104,9 @@ body{
     flex-grow: 0;
     order: 5;
     ID: 5;
-    width: 50px;
+    width: 100px;
     text-align: center;
     margin-top: 45px;
-}
-
-#nav-cart-word{
-    display: none;
-}
-
-#nav-cart-icon{
-    display: block;
 }
 
 
@@ -171,27 +141,12 @@ body{
     }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 700px) {
      .container-nav{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         margin-left: 0;
-    }
-
-    #sale-window{
-        margin-top: 10px;
-    }
-
-    .sale-item-text{
-        font-family: Helvetica;
-        font-size: 25px;
-        color: #000000;
-    }
-
-    .sale-item-image{
-        max-width: 300px;
-        height: auto;
     }
 
     #logo-mobile{
@@ -270,14 +225,6 @@ body{
         margin-top: 10px;
         background-color: #4096EE;
         }
-
-    #nav-cart-icon{
-        display: none;
-    }
-
-    #nav-cart-word{
-        display: block;
-    }
 
     .nav-text{
         font-family: Helvetica;
