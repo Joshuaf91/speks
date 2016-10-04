@@ -12,9 +12,10 @@ Array.prototype.clean = function(deleteValue) {
   }
   return this;
 };
+
 var products = [
     {
-        gender: ["n"],
+        gender: ["n","m"],
         material: ["Metal"],
         productName: "Premium Square Sunglasses",
         price: 35.95,
@@ -26,7 +27,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","m"],
         material: ["Metal"],
         productName: "Premium Round Sunglasses",
         price: 35.95,
@@ -36,7 +37,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","w"],
         material: ["Metal"],
         productName: "Premium Round Sunglasses",
         price: 35.95,
@@ -46,7 +47,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","w"],
         material: ["Metal"],
         productName: "Premium Aviator Sunglasses",
         price: 39.95,
@@ -56,7 +57,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","m"],
         material: ["Plastic"],
         productName: "Mulholland Sunglasses",
         price: 32.95,
@@ -66,7 +67,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","m"],
         material: ["Plastic"],
         productName: "Premium Square Sunglasses",
         price: 39.95,
@@ -76,7 +77,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","w"],
         material: ["Plastic"],
         productName: "Sporty Rectangle Eyeglasses",
         price: 27.95,
@@ -86,7 +87,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","w"],
         material: ["Plastic"],
         productName: "Rectangle Eyeglasses",
         price: 23.95,
@@ -96,7 +97,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","m"],
         material: ["Wood"],
         productName: "Stainless Steel Half-Rim Frame with Acetate Temples and Spring Hinges",
         price: 25.95,
@@ -106,7 +107,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","m"],
         material: ["Wood"],
         productName: "Acetate Full-Rim Frame",
         price: 27.95,
@@ -116,7 +117,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","w"],
         material: ["Wood"],
         productName: "Acetate Full-Rim Frame",
         price: 23.95,
@@ -126,7 +127,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","w"],
         material: ["Wood"],
         productName: "Acetate Full-Rim Frame",
         price: 29.95,
@@ -136,7 +137,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","m"],
         material: ["Tortoise"],
         productName: "Premium Round Sunglasses",
         price: 39.95,
@@ -146,7 +147,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","m"],
         material: ["Tortoise"],
         productName: "Premium Cat-Eye Sunglasses",
         price: 39.95,
@@ -156,7 +157,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","w"],
         material: ["Tortoise"],
         productName: "Square Eyeglasses",
         price: 29.95,
@@ -166,7 +167,7 @@ var products = [
         popularity: 0
     },
     {
-        gender: ["n"],
+        gender: ["n","w"],
         material: ["Tortoise"],
         productName: "Browline Eyeglasses",
         price: 25.95,
