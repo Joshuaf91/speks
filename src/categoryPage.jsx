@@ -38,12 +38,14 @@ var CategoryPage = React.createClass({
 			}
 		});
 		newArr = newArr.clean(undefined).map((element,index) => {
+
 			if(this.props.params.category && products[element].material.indexOf(this.props.params.category)){
 				return undefined;
 			}else{
 				return <div key={'frames' + index} className='col-xs-6 col-md-6 col-xl-6'>
 							<h5 className='text-center'>{products[element].productName} | <em>{products[element].price}</em></h5>
-							<img onClick={this.takeACLoserLook} className='img-responsive' src={products[element].imgSrc[0]} alt={element} />
+
+							<img onClick={this.takeACLoserLook} className='img-responsive glassesImage' src={products[element].imgSrc[0]} alt={element} />
 							<Modal show={this.state.showModal}>
 								<ProductPage product={this.state.modalProduct} xButton={this.closeModule}/>
 							</Modal>
@@ -72,7 +74,7 @@ var CategoryPage = React.createClass({
 										<li>Popularity</li>
 									</ul>
 								</div>
-								<div className='col-xs-10 col-md-10 col-xl-10'>
+								<div className='col-xs-10 col-md-10 col-xl-10 '>
 									{this.state.display}
 								</div>
 							</div>
