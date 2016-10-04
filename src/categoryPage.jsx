@@ -3,8 +3,7 @@ import products from './data.js';
 
 var CategoryPage = React.createClass({
 	takeACLoserLook(event){
-		console.log(event.target);
-		console.log(event.target.src);
+		console.log(event.target.alt);
 	},
 
 	render(){
@@ -19,12 +18,12 @@ var CategoryPage = React.createClass({
 			if(products[element].material.indexOf(this.props.params.gender) > -1){
 				return <div key={'frames' + index} className='col-xs-6 col-md-6 col-xl-6'>
 							<h5 className='text-center'>{products[element].productName} | <em>{products[element].price}</em></h5>
-							<img className='img-responsive' src={products[element].imgSrc[0]} alt="gaphas" />
+							<img className='img-responsive' src={products[element].imgSrc[0]} alt={element} />
 				 </div>
 			}else{
-				return <div key={'frames' + index} className='col-xs-6 col-md-6 col-xl-6'>
+				return <div onClick={this.takeACLoserLook} key={'frames' + index} className='col-xs-6 col-md-6 col-xl-6'>
 							<h5 className='text-center'>{products[element].productName} | <em>{products[element].price}</em></h5>
-							<img onClick={this.takeACLoserLook} className='img-responsive' src={products[element].imgSrc[0]} alt="gaphas" />
+							<img className='img-responsive' src={products[element].imgSrc[0]} alt={element} />
 				 </div>
 			}
 		});
