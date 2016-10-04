@@ -24,6 +24,7 @@ var Cart = React.createClass ({
         })
         this.setState({total : total})
     },
+
     render: function() {
         var products = this.state.products.map(function(element){
             return ( 
@@ -39,7 +40,7 @@ var Cart = React.createClass ({
                                 ${data[element].price}
                             </div>
                             <div className="col-xs-3">
-                                <button type="button" >Remove from Cart</button>
+                                <button className="btn btn-default"type="button" >Remove</button>
                             </div>
                         </div>
                     </div>
@@ -49,11 +50,11 @@ var Cart = React.createClass ({
             <div>
                 <h1>Shopping Cart</h1>
                 <hr />
-                <ul>
+                <ol>
                     {products}
-                </ul>
+                </ol>
                 <hr />
-                <h3 className="pull-right" id="totalPrice">Total Price: {this.totalPrice}</h3>
+                <h3 className="pull-right" id="totalPrice">Total Price: {this.state.total}</h3>
             </div>
         )
     }
