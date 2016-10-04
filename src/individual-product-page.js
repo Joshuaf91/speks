@@ -18,8 +18,8 @@ var ProductPage = React.createClass({
 			<div className="text-center">
 				<div className='row'>
 					<h3 className='col-xs-10'>{this.props.product[0].productName}</h3>
-					<button type="button" className="col-xs-1 btn btn-default btn-xs" onClick={this.props.xButton}>X</button>
-					<p className="col-xs-1"></p>
+					<h3><button type="button" className="col-xs-1 btn btn-default btn-xs" onClick={this.props.xButton}>X</button></h3>
+					<h3><p className="col-xs-1"></p></h3>
 				</div>
 				<div className='row'><img className='col-xs-12' src={this.props.product[0].imgSrc[0]} alt="#"/></div>
 				<div className='row'>
