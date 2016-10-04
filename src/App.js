@@ -23,10 +23,10 @@ var App = React.createClass({
 
 ReactDOM.render(
   <Router history={hashHistory}>
-    <Router path="/" component={App}>
+    <Route path="/" component={App}>
       <IndexRoute component={Home}/>
       <Route path="/CategoryPage/:gender(/:category)" component={CategoryPage}/>
-    </Router>
+    </Route>
   </Router>,
   document.getElementById('root')
 );

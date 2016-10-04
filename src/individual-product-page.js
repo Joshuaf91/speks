@@ -13,7 +13,6 @@ var ProductPage = React.createClass({
 			price: products[0][0].price
 		}
 	},
-
 	render(){
 		console.log(products)
 		return(
