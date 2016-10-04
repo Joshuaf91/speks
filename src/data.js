@@ -12,6 +12,7 @@ Array.prototype.clean = function(deleteValue) {
   }
   return this;
 };
+
 var products = [
     {
         gender: ["n","m"],
