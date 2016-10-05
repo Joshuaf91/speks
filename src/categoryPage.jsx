@@ -55,8 +55,8 @@ var CategoryPage = React.createClass({
 		this.setState({display:newArr});
 	},
 	componentWillReceiveProps:function(){
-		console.log("componentWillReceiveProps")
-		this.displayData();
+		// had to set a time out because the state was not updating fast enough and this.displayData was rerendering with old information
+		setTimeout(this.displayData, 1);
 	},
 	componentWillMount:function(){
 		this.displayData();
