@@ -181,6 +181,10 @@ a:hover, a:visited, a:link, a:active
 
 
 
+#totalPrice {
+    margin-right: 150px;
+}
+
 .App {
     text-align: center;
 }

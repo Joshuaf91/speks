@@ -66,18 +66,18 @@ var CategoryPage = React.createClass({
 		console.log("i fucking rerendered")
 			return(
 					<div>
-							<div className='container-fluid'>
-								<div className='col-xs-2 col-md-2 col-xl-2'>
-									<h5>Sort By:</h5>
-									<ul>
-										<li>Price</li>
-										<li>Popularity</li>
-									</ul>
-								</div>
-								<div className='col-xs-10 col-md-10 col-xl-10 '>
-									{this.state.display}
-								</div>
+						<div className='container-fluid'>
+							<div className='col-xs-2 col-md-2 col-xl-2'>
+								<h5>Sort By:</h5>
+								<ul>
+									<li>Price</li>
+									<li>Popularity</li>
+								</ul>
 							</div>
+							<div className='col-xs-10 col-md-10 col-xl-10 '>
+								{this.state.display}
+							</div>
+						</div>
 					</div>
 				)
 	}
