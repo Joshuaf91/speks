@@ -12,19 +12,18 @@ var CategoryPage = React.createClass({
 			showModal: false,
 			modalProduct: null
 		}
+
 	},  //modal functionality, closing
 	closeModule:function(){
 		this.setState({showModal: false,
 			modalProduct: null
-		});
-		this.displayData();
+		}, this.displayData);
 	}, //modal functionaility, opening
 	takeACLoserLook(event){
 		this.setState({
 			showModal: true,
 			modalProduct: [products[event.target.alt], event.target.alt]
-		})
-		this.displayData();
+		}, this.displayData);
 	}, //dynamic generation of content
 	displayData: function(){
 		console.log("params",this.props.params)
@@ -47,7 +46,7 @@ var CategoryPage = React.createClass({
 
 							<img onClick={this.takeACLoserLook} className='img-responsive glassesImage' src={products[element].imgSrc[0]} alt={element} />
 							<Modal show={this.state.showModal}>
-								<ProductPage product={this.state.modalProduct} xButton={this.closeModule}/>
+								<ProductPage product={this.state.modalProduct} xButton={this.closeModule} changeCart={this.props.changeCart}/>
 							</Modal>
 				 </div>
 			}
@@ -56,18 +55,17 @@ var CategoryPage = React.createClass({
 		this.setState({display:newArr});
 	},
 	componentWillReceiveProps:function(){
-		console.log("componentWillReceiveProps")
-		this.displayData();
+		// had to set a time out because the state was not updating fast enough and this.displayData was rerendering with old information
+		setTimeout(this.displayData, 1);
 	},
 	componentWillMount:function(){
 		this.displayData();
 	},
 	render(){
-		console.log("i fucking rerendered")
 			return(
 					<div>
 						<div className="container-home">
-     		 
+     		 				
           					<div id="home-background-web">
 								<img id="category-header-web" src="https://s22.postimg.org/smy6gi0xd/genderless_category_header_web.png" alt="category" />
 							</div>
@@ -77,6 +75,8 @@ var CategoryPage = React.createClass({
 							</div>
 
 						</div>
+
+						<FilterBar/>
 
 						<div className='container-fluid'>
 							<div className='col-xs-12 col-md-12 col-xl-12'>
