@@ -10,7 +10,8 @@ var CategoryPage = React.createClass({
 		return{
 			display:null,
 			showModal: false,
-			modalProduct: null
+			modalProduct: null,
+			filterBar: ["filter-click-change-genderless", "filter-click-change-women", "filter-click-change-men"]
 		}
 
 	},  //modal functionality, closing
@@ -62,21 +63,24 @@ var CategoryPage = React.createClass({
 		this.displayData();
 	},
 	render(){
+
+		var imgIndex = this.props.params.gender === "n" ? 0 : this.props.params.gender === "w" ? 1 : 2;
+		
 			return(
 					<div>
-						<div className="container-home">
+						<div className="container-home ">
      		 				
           					<div id="home-background-web">
-								<img id="category-header-web" src="https://s22.postimg.org/smy6gi0xd/genderless_category_header_web.png" alt="category" />
+								<img id="category-header-web" src={this.props.webImgSrc[imgIndex]} alt="category" />
 							</div>
 
 							<div id="home-background-mobile">
-     		 					<img id="category-header-web" src="https://s10.postimg.org/qm5xowkqh/genderless_category_header_mobile.png" alt="category" />
+     		 					<img id="category-header-web" src={this.props.mobileImgSrc[imgIndex]} alt="category" />
 							</div>
 
 						</div>
 
-						<FilterBar/>
+						<FilterBar filterColor={this.state.filterBar[imgIndex]} />
 
 						<div className='container-fluid'>
 							<div className='col-xs-2 col-md-2 col-xl-2'>

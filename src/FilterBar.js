@@ -4,10 +4,10 @@ import {Link} from 'react-router';
 var FilterBar = React.createClass({
 
 	render: function() {
-
+	console.log("	a;ldksgaskln;laskdgnasdl;kgnslkdgn" + this.props.filterColor)
 		return(
 
-			<div id="filter-bar" className="container-nav">
+			<div id={this.props.filterColor} className="container-nav">
 
 				<div id="nav-metal" className="nav-text">
 					<Link to="CategoryPage/n">METAL</Link>
