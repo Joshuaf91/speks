@@ -24,15 +24,15 @@ var NewNav = React.createClass({
 					</div>
 				</div>
 
-				<div id="nav-genderless" className="nav-text" onClick={this.props.goToCategoryPage.bind(this,'n')}>
+				<div id="nav-genderless" className="nav-text" onClick={this.props.goToCategoryPage.bind(this.props.that,'n')}>
 					GENDERLESS
 				</div>
 
-				<div id="nav-women" className="nav-text" onClick={this.props.goToCategoryPage.bind(this,'w')}>
+				<div id="nav-women" className="nav-text" onClick={this.props.goToCategoryPage.bind(this.props.that,'w')}>
 					WOMEN
 				</div>
 
-				<div id="nav-men" className="nav-text" onClick={this.props.goToCategoryPage.bind(this,'m')}>
+				<div id="nav-men" className="nav-text" onClick={this.props.goToCategoryPage.bind(this.props.that, 'm')}>
 					MEN
 				</div>
 

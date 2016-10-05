@@ -2,16 +2,19 @@ import React from 'react'
 import products from './data.js';
 import {Modal} from 'react-bootstrap';
 import ProductPage from './individual-product-page.js';
-
+import FilterBar from './FilterBar';
 
 
 var CategoryPage = React.createClass({
 	getInitialState:function(){
+		console.log("--------------")
+		console.log(this.props)
 		return{
 			display:null,
 			showModal: false,
 			modalProduct: null
 		}
+
 	},
 	closeModule:function(){
 		this.setState({showModal: false,
@@ -47,7 +50,7 @@ var CategoryPage = React.createClass({
 
 							<img onClick={this.takeACLoserLook} className='img-responsive glassesImage' src={products[element].imgSrc[0]} alt={element} />
 							<Modal show={this.state.showModal}>
-								<ProductPage product={this.state.modalProduct} xButton={this.closeModule} changeCart={this.props.location.query.changeCart}/>
+								<ProductPage product={this.state.modalProduct} xButton={this.closeModule} changeCart={this.props.location.query.count}/>
 							</Modal>
 				 </div>
 			}
@@ -64,8 +67,21 @@ var CategoryPage = React.createClass({
 	},
 	render(){
 		console.log("i fucking rerendered")
+		console.log(this.props.location.query)
 			return(
 					<div>
+						<div className="container-home">
+     		 
+          					<div id="home-background-web">
+								<img id="category-header-web" src="https://s22.postimg.org/smy6gi0xd/genderless_category_header_web.png" alt="category" />
+							</div>
+
+							<div id="home-background-mobile">
+     		 					<img id="category-header-web" src="https://s10.postimg.org/qm5xowkqh/genderless_category_header_mobile.png" alt="category" />
+							</div>
+
+						</div>
+
 						<div className='container-fluid'>
 							<div className='col-xs-2 col-md-2 col-xl-2'>
 								<h5>Sort By:</h5>
@@ -78,6 +94,7 @@ var CategoryPage = React.createClass({
 								{this.state.display}
 							</div>
 						</div>
+
 					</div>
 				)
 	}

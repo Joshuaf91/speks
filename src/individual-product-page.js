@@ -4,14 +4,13 @@ import React from 'react';
 //props.product is an array where the first item is an object from data.js and the second index is the index of the first item within data.js
 var ProductPage = React.createClass({
 	addToCart(){
-
-		this.props.changeCart(this.props.product[1]);
+		this.props.changeCart(this.props.product[1])
 		this.props.xButton();
 	},
 
 	render(){
-		if (! this.props.product) { return null; }
-
+		if (! this.props.product) { return null }
+			console.log("this is individual produc page coming to you with its props", this.props);
 		return(
 			<div className="text-center">
 				<div className='row'>

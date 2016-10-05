@@ -10,10 +10,9 @@ import CategoryPage from'./categoryPage';
 import NewNav from './NewNav';
 import Cart from './Cart';
 
-
 var App = React.createClass({
   getInitialState: function(){
-    return{cart:[] , category:null}
+    return{cart:[]}
   },
   contextTypes: {
     router: React.PropTypes.object.isRequired
@@ -22,8 +21,10 @@ var App = React.createClass({
     this.context.router.push({
         pathname:"/CategoryPage/"+ category, 
         query: {
+          that: this,
           cart: this.state.cart,
-          changeCart: this.changeCart
+          changeCart: function(array){this.changeCart(array)},
+          count: function () {console.log(2+2)}
         }})
   },
   changeGender:function(gender){
@@ -33,12 +34,14 @@ var App = React.createClass({
     this.context.router.push({
         pathname:"/cart", 
         query: {
+          that: this,
           cart: this.state.cart,
-          changeCart: this.changeCart
+          changeCart: this.changeCart.bind(this)
         }})
   },
   changeCart: function(index){
-    var array = this.state.cart.push(index);
+    debugger;
+    var array = this.state.cart.concat(index);
     this.setState({cart:array});
   },
   render: function() {
@@ -46,11 +49,15 @@ var App = React.createClass({
     return (
       <div id="app-width">
       	<div id="app-nav">
-          <NewNav goToCategoryPage={this.goToCategoryPage} goToCart={this.goToCart} changeGender={this.changeGender}/>
+          <NewNav goToCategoryPage={this.goToCategoryPage} goToCart={this.goToCart} changeGender={this.changeGender} that={this} />
         </div>
         
         <div id="app-home">
           {this.props.children}
+        </div>
+
+        <div id="footer">
+          <Footer />
         </div>
       </div>
     )
