@@ -2,14 +2,95 @@ body{
     margin: 0px;
 }
 
+#footer{
+    background-color: #faedee;
+    margin-top: 80px;
+    padding: 20px;
+}
+
 #root{
     max-width: 1220px;
     margin: 0 auto;
+} 
+
+.container-category{
+     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 5px;
+    margin-top: 5px;
+    position: relative;
+}
+
+#nav-metal{
+    align-self: auto;
+    flex-grow: 0;
+    order: 1;
+    ID: 1;
+    width: 20%;
+    text-align: center;
+    margin-right: 60px;
+    margin-top: 45px;
+}
+
+#nav-plastic{
+    align-self: auto;
+    flex-grow: 0;
+    order: 2;
+    ID: 2;
+    width: 100px;
+    text-align: center;
+    margin-right: 60px;
+    margin-top: 45px; 
+}
+
+#nav-wood{
+    align-self: auto;
+    flex-grow: 0;
+    order: 3;
+    ID: 3;
+    width: 20%;
+    text-align: center;
+    margin-top: 45px;
+}
+
+#nav-tortoise{
+    align-self: auto;
+    flex-grow: 0;
+    order: 4;
+    ID: 4;
+    width: 20%;
+    text-align: center;
+    margin-top: 45px;
+}
+
+#nav-multicolor{
+    align-self: auto;
+    flex-grow: 0;
+    order: 5;
+    ID: 5;
+    width: 20%;
+    text-align: center;
+    margin-top: 45px;
+}
+
+
+
+#category-header-web{
+    width: 100%;
+    height: auto;
 }
 
 .icon{
     font-size: 40px;
     color: #4096EE;
+}
+
+#pink-box{
+    background-color: #faedee;
+    height: 1000px;
+    width: auto;
+    margin-top: 85px;
 }
 
 #sale-window{
@@ -224,8 +305,25 @@ a:hover, a:visited, a:link, a:active
     }
 
     #sale-window{
-        margin-top: 10px;
+        margin-top: 40px;
+        margin-left: auto;
+        justify-content: center;
+        text-align: center;
+        max-width: 100%;
+        font-family: Oswald;
+        font-size: 20px;
+        text-shadow: 2px 2px #777777;
+        color: #FFF0F2;
+        line-height: 100%;
     }
+
+    .the-gatsby{
+    font-size: 35px;
+    font-family: Abril Fatface;
+    color: #777777;
+    text-shadow: none;
+    }
+
 
     .sale-item-text{
         font-family: Helvetica;
@@ -234,8 +332,14 @@ a:hover, a:visited, a:link, a:active
     }
 
     .sale-item-image{
-        max-width: 300px;
+        max-width: 80%;
         height: auto;
+    }
+
+    button.sale-button{
+        width: 250px;
+        height: 70px;
+        font-size: 35px;
     }
 
     #logo-mobile{
