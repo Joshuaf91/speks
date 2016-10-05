@@ -65,7 +65,7 @@ var CategoryPage = React.createClass({
 			return(
 					<div>
 						<div className="container-home">
-     		 
+     		 				
           					<div id="home-background-web">
 								<img id="category-header-web" src="https://s22.postimg.org/smy6gi0xd/genderless_category_header_web.png" alt="category" />
 							</div>
@@ -75,6 +75,8 @@ var CategoryPage = React.createClass({
 							</div>
 
 						</div>
+
+						<FilterBar/>
 
 						<div className='container-fluid'>
 							<div className='col-xs-2 col-md-2 col-xl-2'>
