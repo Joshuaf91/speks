@@ -9,7 +9,8 @@ var ProductPage = React.createClass({
 	},
 
 	render(){
-		if (! this.props.product) { return null }
+		if (! this.props.product) { return null; }
+			//content inside modal, based on onClick event listener
 			console.log("this is individual produc page coming to you with its props", this.props);
 		return(
 			<div className="text-center">

@@ -3,7 +3,7 @@ import data from './data.js';
 
 var Cart = React.createClass ({
     getInitialState: function(){
-        return ({products: [2,4,5,6,7]})
+        return ({products: this.props.cart})
     },
     removeItem: function(e, productsName){
         var productsIndex;

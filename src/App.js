@@ -18,26 +18,13 @@ var App = React.createClass({
     router: React.PropTypes.object.isRequired
   },
   goToCategoryPage:function(category){
-    this.context.router.push({
-        pathname:"/CategoryPage/"+ category, 
-        query: {
-          that: this,
-          cart: this.state.cart,
-          changeCart: function(array){this.changeCart(array)},
-          count: function () {console.log(2+2)}
-        }})
+    this.context.router.push("/CategoryPage/"+category)
   },
   changeGender:function(gender){
     this.setState({gender:gender});
   },
   goToCart:function(){
-    this.context.router.push({
-        pathname:"/cart", 
-        query: {
-          that: this,
-          cart: this.state.cart,
-          changeCart: this.changeCart.bind(this)
-        }})
+    this.context.router.push("/cart")
   },
   changeCart: function(index){
     debugger;
@@ -49,11 +36,14 @@ var App = React.createClass({
     return (
       <div id="app-width">
       	<div id="app-nav">
-          <NewNav goToCategoryPage={this.goToCategoryPage} goToCart={this.goToCart} changeGender={this.changeGender} that={this} />
+          <NewNav goToCategoryPage={this.goToCategoryPage} goToCart={this.goToCart} that={this} />
         </div>
         
         <div id="app-home">
-          {this.props.children}
+          {React.cloneElement(this.props.children, {
+              cart: this.state.cart,
+              changeCart: this.changeCart,
+            })}
         </div>
 
         <div id="footer">

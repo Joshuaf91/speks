@@ -7,28 +7,24 @@ import FilterBar from './FilterBar';
 
 var CategoryPage = React.createClass({
 	getInitialState:function(){
-		console.log("--------------")
-		console.log(this.props)
 		return{
 			display:null,
 			showModal: false,
 			modalProduct: null
 		}
 
-	},
+	},  //modal functionality, closing
 	closeModule:function(){
 		this.setState({showModal: false,
 			modalProduct: null
-		});
-		this.displayData();
-	},
+		}, this.displayData);
+	}, //modal functionaility, opening
 	takeACLoserLook(event){
 		this.setState({
 			showModal: true,
 			modalProduct: [products[event.target.alt], event.target.alt]
-		})
-		this.displayData();
-	},
+		}, this.displayData);
+	}, //dynamic generation of content
 	displayData: function(){
 		console.log("params",this.props.params)
 		console.log("products", products)
@@ -45,12 +41,12 @@ var CategoryPage = React.createClass({
 			if(this.props.params.category && products[element].material.indexOf(this.props.params.category)){
 				return undefined;
 			}else{
-				return <div key={'frames' + index} className='col-xs-6 col-md-6 col-xl-6'>
+				return <div key={'frames' + index} className='col-xs-12 col-sm-6 col-md-6 col-xl-6'>
 							<h5 className='text-center'>{products[element].productName} | <em>{products[element].price}</em></h5>
 
 							<img onClick={this.takeACLoserLook} className='img-responsive glassesImage' src={products[element].imgSrc[0]} alt={element} />
 							<Modal show={this.state.showModal}>
-								<ProductPage product={this.state.modalProduct} xButton={this.closeModule} changeCart={this.props.location.query.count}/>
+								<ProductPage product={this.state.modalProduct} xButton={this.closeModule} changeCart={this.props.changeCart}/>
 							</Modal>
 				 </div>
 			}
@@ -66,8 +62,6 @@ var CategoryPage = React.createClass({
 		this.displayData();
 	},
 	render(){
-		console.log("i fucking rerendered")
-		console.log(this.props.location.query)
 			return(
 					<div>
 						<div className="container-home">
