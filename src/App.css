@@ -2,6 +2,11 @@ body{
     margin: 0px;
 }
 
+#cart-background-mobile{
+    display: none;
+    width: 100px;
+}
+
 #filter-click-change-genderless{
     background-color: #252b39;
     text-align: center;
@@ -21,21 +26,13 @@ body{
 }
 
 #filter-click-change-men{
-    background-color: blue;
+    background-color: #5CACEE;
     text-align: center;
     margin-bottom: 20px;
     margin-top: -5px;
     width: 100%;
     margin-left: 0;
 }
-
-/*#filter-bar{
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: -5px;
-    width: 100%;
-    margin-left: 0;
-}*/
 
 .cream-box{
     width: 100%;
@@ -357,6 +354,61 @@ a:hover, a:visited, a:link, a:active
         margin-left: 0;
     }
 
+    #nav-metal{
+        align-self: auto;
+        flex-grow: 0;
+        order: 1;
+        ID: 1;
+        width: 100%;
+        text-align: center;
+        align-content: center;
+        margin-top: 10px;
+    }
+
+    #nav-plastic{
+        align-self: auto;
+        flex-grow: 0;
+        order: 2;
+        ID: 2;
+        width: 100%;
+        text-align: center;
+        align-content: center;
+        margin-top: 10px;
+    }
+
+    #nav-wood{
+        align-self: auto;
+        flex-grow: 0;
+        order: 3;
+        ID: 3;
+        width: 100%;
+        text-align: center;
+        align-content: center;
+        margin-top: 10px;
+    }
+
+    #nav-tortoise{
+        align-self: auto;
+        flex-grow: 0;
+        order: 4;
+        ID: 4;
+        width: 100%;
+        text-align: center;
+        align-content: center;
+        margin-top: 10px;
+    }
+
+    #nav-multicolor{
+        align-self: auto;
+        flex-grow: 0;
+        order: 5;
+        ID: 5;
+        width: 100%;
+        text-align: center;
+        align-content: center;
+        margin-top: 10px;
+    }
+
     #sale-window{
         margin-top: 40px;
         margin-left: auto;
@@ -508,3 +560,4 @@ a:hover, a:visited, a:link, a:active
         height: auto;
     } 
 }
+
