@@ -1,7 +1,7 @@
 
 import React from 'react';
 import products from './data.js';
-import {Modal, DropdownButton, MenuItem} from 'react-bootstrap';
+import {Modal, SplitButton, MenuItem, ButtonGroup} from 'react-bootstrap';
 
 
 //props.product is an array where the first item is an object from data.js and the second index is the index of the first item within data.js
@@ -25,15 +25,18 @@ var ProductPage = React.createClass({
 				<div className='row'><img className='col-xs-12' src={this.props.product[0].imgSrc[0]} alt="#"/></div>
 				<div className='row'>
 					<div className='col-sm-7'><h5>Description</h5> {this.props.product[0].description}</div>						
-					<div className='col-sm-5'><h5>Price </h5>
-											{this.props.product[0].price}
-												<div class="dropdown">
-												 <DropdownButton title="Qty:" id="bg-nested-dropdown">
-											      <MenuItem eventKey="1">Dropdown link</MenuItem>
-											      <MenuItem eventKey="2">Dropdown link</MenuItem>
-											    </DropdownButton>
-											    </div>
-											<button type="button" className="btn btn-default btn-lg" onClick={this.addToCart}>Add to cart</button>
+					<div className='col-sm-5'><h5>Price </h5> <br />
+											{this.props.product[0].price} <span> </span>
+										
+												 <select>
+												 	<option value='1' >1</option>
+												 	<option value='2' >2</option>
+												 	<option value='3' >3</option>
+												 	<option value='4' >4</option>
+												 	<option value='5' >5</option>
+												 </select>
+											  <br /> <br />
+											<button type="button" className="btn btn-default btn-md" onClick={this.addToCart}>Add to cart</button>
 					</div>				
 				</div>
 			</div>
