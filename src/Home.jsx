@@ -1,5 +1,5 @@
 import React from 'react';
-import Cart from './Cart.js';
+import SaleWindow from './SaleWindow';
 
 var Home = React.createClass({
   render: function() {
@@ -15,7 +15,13 @@ var Home = React.createClass({
      			<img className="background-small" src="https://s16.postimg.org/hcf89wv2t/speks_opening_image_mobile.png" alt="background" />
      		</div>
      	</div>
-    </div>
+
+      <div id="sale-window">
+        <SaleWindow />
+      </div>
+
+      </div>
+
     )
   }
 })
