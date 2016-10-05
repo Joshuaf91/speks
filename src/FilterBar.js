@@ -4,29 +4,29 @@ import {Link} from 'react-router';
 var FilterBar = React.createClass({
 
 	render: function() {
-	console.log("	a;ldksgaskln;laskdgnasdl;kgnslkdgn" + this.props.filterColor)
+	console.log("	a;ldksgaskln;laskdgnasdl;kgnslkdgngender " + this.props.gender)
 		return(
 
 			<div id={this.props.filterColor} className="container-nav">
 
 				<div id="nav-metal" className="nav-text">
-					<Link to="CategoryPage/n">METAL</Link>
+					<Link to={"CategoryPage/"+ this.props.gender+"/Metal"}>METAL</Link>
 				</div>
 
 				<div id="nav-plastic" className="nav-text">
-					<Link to="CategoryPage/w">PLASTIC</Link>
+					<Link to={"CategoryPage/" + this.props.gender+"/Plastic"}>PLASTIC</Link>
 				</div>
 
 				<div id="nav-wood" className="nav-text">
-					<Link to="CategoryPage/m">WOOD</Link>
+					<Link to={"CategoryPage/"+ this.props.gender+"/Wood"}>WOOD</Link>
 				</div>
 
 				<div id="nav-tortoise" className="nav-text">
-					<Link to="CategoryPage/m">TORTOISE</Link>
+					<Link to={"CategoryPage/"+ this.props.gender+"/Tortoise"}>TORTOISE</Link>
 				</div>
 
 				<div id="nav-multicolor" className="nav-text">
-					<Link to="CategoryPage/m">MULTICOLOR</Link>
+					<Link to={"CategoryPage/"+ this.props.gender+"/Multicolor"}>MULTICOLOR</Link>
 				</div>
 
 			</div> 

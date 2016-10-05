@@ -25,6 +25,7 @@ var CategoryPage = React.createClass({
 			showModal: true,
 			modalProduct: [products[event.target.alt], event.target.alt]
 		}, this.displayData);
+
 	}, //dynamic generation of content
 	displayData: function(){
 		console.log("params",this.props.params)
@@ -80,7 +81,7 @@ var CategoryPage = React.createClass({
 
 						</div>
 
-						<FilterBar filterColor={this.state.filterBar[imgIndex]} />
+						<FilterBar filterColor={this.state.filterBar[imgIndex]} gender={this.props.params.gender}/>
 
 						<div className='container-fluid'>
 							<div className='col-xs-2 col-md-2 col-xl-2'>
