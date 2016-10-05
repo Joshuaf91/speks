@@ -10,7 +10,6 @@ import Footer from './footer';
 import CategoryPage from'./categoryPage';
 import NewNav from './NewNav';
 
-
 var App = React.createClass({
   render: function() {
     return (
@@ -21,6 +20,10 @@ var App = React.createClass({
         
         <div id="app-home">
           {this.props.children}
+        </div>
+
+        <div id="footer">
+          <Footer />
         </div>
       </div>
     )

@@ -2,7 +2,7 @@ import React from 'react'
 import products from './data.js';
 import {Modal} from 'react-bootstrap';
 import ProductPage from './individual-product-page.js';
-
+import FilterBar from './FilterBar';
 
 
 var CategoryPage = React.createClass({
@@ -66,6 +66,18 @@ var CategoryPage = React.createClass({
 		console.log("i fucking rerendered")
 			return(
 					<div>
+						<div className="container-home">
+     		 
+          					<div id="home-background-web">
+								<img id="category-header-web" src="https://s22.postimg.org/smy6gi0xd/genderless_category_header_web.png" alt="category" />
+							</div>
+
+							<div id="home-background-mobile">
+     		 					<img id="category-header-web" src="https://s10.postimg.org/qm5xowkqh/genderless_category_header_mobile.png" alt="category" />
+							</div>
+
+						</div>
+
 						<div className='container-fluid'>
 							<div className='col-xs-2 col-md-2 col-xl-2'>
 								<h5>Sort By:</h5>
@@ -78,6 +90,7 @@ var CategoryPage = React.createClass({
 								{this.state.display}
 							</div>
 						</div>
+
 					</div>
 				)
 	}
