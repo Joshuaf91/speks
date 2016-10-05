@@ -2,6 +2,30 @@ body{
     margin: 0px;
 }
 
+.cream-box{
+    width: 100%;
+    height: auto;
+    font-family: Helvetica;
+    color: #a9a9a9;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+}
+
+.cream-box-social{
+    width: 100%;
+    height: auto;
+    font-family: Helvetica;
+    color: #a9a9a9;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+}
+
+.video-box{
+    text-align: center;
+}
+
 #footer{
     background-color: #faedee;
     margin-top: 80px;
