@@ -1,13 +1,11 @@
 
 import React from 'react';
-import products from './data.js';
-import {Modal} from 'react-bootstrap';
 
-
+//props.product is an array where the first item is an object from data.js and the second index is the index of the first item within data.js
 var ProductPage = React.createClass({
 	addToCart(){
-		var arr =[];
-		arr.push(this.props.product[1])
+
+		this.props.changeCart(this.props.product[1]);
 		this.props.xButton();
 	},
 

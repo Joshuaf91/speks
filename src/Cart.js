@@ -13,15 +13,16 @@ var Cart = React.createClass ({
                 return true;
             }
         })
-        if(typeof productsName != 'undefined'){
+        if(typeof productsName !== 'undefined'){
             this.state.products.splice(productsIndex, 1)
         }
     },
     totalPrice: function(){
         var total = 0;
         this.state.products.forEach(function(item, index){
-            total += products.price
+            total += data.price
         })
+        console.log(total);
         this.setState({total : total})
     },
 
@@ -31,7 +32,7 @@ var Cart = React.createClass ({
                     <div className="container-fluid text-center">
                         <div className="row">
                             <div className="col-xs-3">
-                                <img src={data[element].imgSrc[0]} alt="Product Image" height="50px" />
+                                <img src={data[element].imgSrc[0]} alt="Product" height="50px" />
                             </div>
                             <div className="col-xs-3">
                                 {data[element].productName}

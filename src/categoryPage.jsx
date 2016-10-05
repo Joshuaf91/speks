@@ -47,7 +47,7 @@ var CategoryPage = React.createClass({
 
 							<img onClick={this.takeACLoserLook} className='img-responsive glassesImage' src={products[element].imgSrc[0]} alt={element} />
 							<Modal show={this.state.showModal}>
-								<ProductPage product={this.state.modalProduct} xButton={this.closeModule}/>
+								<ProductPage product={this.state.modalProduct} xButton={this.closeModule} changeCart={this.props.location.query.changeCart}/>
 							</Modal>
 				 </div>
 			}

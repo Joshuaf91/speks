@@ -24,25 +24,25 @@ var NewNav = React.createClass({
 					</div>
 				</div>
 
-				<div id="nav-genderless" className="nav-text">
-					<Link to="CategoryPage/n" onClick={this.linkClick.bind(this,"CategoryPage/n")}>GENDERLESS</Link>
+				<div id="nav-genderless" className="nav-text" onClick={this.props.goToCategoryPage.bind(this,'n')}>
+					GENDERLESS
 				</div>
 
-				<div id="nav-women" className="nav-text">
-					<Link to="CategoryPage/w" onClick={this.linkClick.bind(this,"CategoryPage/w")}>WOMEN</Link>
+				<div id="nav-women" className="nav-text" onClick={this.props.goToCategoryPage.bind(this,'w')}>
+					WOMEN
 				</div>
 
-				<div id="nav-men" className="nav-text">
-					<Link to="CategoryPage/m" onClick={this.linkClick.bind(this,"CategoryPage/m")}>MEN </Link>
+				<div id="nav-men" className="nav-text" onClick={this.props.goToCategoryPage.bind(this,'m')}>
+					MEN
 				</div>
 
 				<div id="nav-cart" className="nav-text">
 					
-					<div id="nav-cart-word">
+					<div id="nav-cart-word" onClick={this.props.goToCart}>
 					 CART
 					</div>
 
-					<div id="nav-cart-icon">
+					<div id="nav-cart-icon" onClick={this.props.goToCart}>
 						<i className="icon fa fa-shopping-cart"></i> 
 					</div>
 				</div>
