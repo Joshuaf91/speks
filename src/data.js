@@ -99,7 +99,7 @@ var products = [
     {
         gender: ["n","m"],
         material: ["Wood"],
-        productName: "Stainless Steel Half-Rim Frame with Acetate Temples and Spring Hinges",
+        productName: "Half-Rim Frame & Acetate Temples",
         price: 25.95,
         color: ["Brown", "Gray"],
         description: "Beautiful tortoiseshell streaks on the spring-hinged temple arms distinguish this half-rim, wide-width, rectangular, mixed-material Men's eyeglasses frame. Silicone nose pads are included for a comfortable fit. A stainless steel rod is embedded in the temple arms to make them easy to adjust. With a slight, racy angle on the bridge, these are the perfect glasses for staying in or going out. To us, the latter is preferable. Since these eyeglasses look so great, wouldn't you want to show them off?",
