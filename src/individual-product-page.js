@@ -1,7 +1,7 @@
 
 import React from 'react';
 import products from './data.js';
-import {Modal} from 'react-bootstrap';
+import {Modal, DropdownButton, MenuItem} from 'react-bootstrap';
 
 
 var ProductPage = React.createClass({
@@ -25,7 +25,13 @@ var ProductPage = React.createClass({
 				<div className='row'>
 					<div className='col-sm-7'><h5>Description</h5> {this.props.product[0].description}</div>						
 					<div className='col-sm-5'><h5>Price </h5>
-											{this.props.product[0].price}<br /><br /> 
+											{this.props.product[0].price}
+												<div class="dropdown">
+												 <DropdownButton title="Qty:" id="bg-nested-dropdown">
+											      <MenuItem eventKey="1">Dropdown link</MenuItem>
+											      <MenuItem eventKey="2">Dropdown link</MenuItem>
+											    </DropdownButton>
+											    </div>
 											<button type="button" className="btn btn-default btn-lg" onClick={this.addToCart}>Add to cart</button>
 					</div>				
 				</div>

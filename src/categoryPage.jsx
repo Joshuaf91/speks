@@ -79,14 +79,14 @@ var CategoryPage = React.createClass({
 						</div>
 
 						<div className='container-fluid'>
-							<div className='col-xs-2 col-md-2 col-xl-2'>
+							<div className='col-xs-12 col-md-12 col-xl-12'>
 								<h5>Sort By:</h5>
 								<ul>
 									<li>Price</li>
 									<li>Popularity</li>
 								</ul>
 							</div>
-							<div className='col-xs-10 col-md-10 col-xl-10 '>
+							<div className='col-xs-12 col-md-12 col-xl-12 '>
 								{this.state.display}
 							</div>
 						</div>
