@@ -13,18 +13,33 @@ body{
 }
 
 #sale-window{
-    margin-top: -300px;
+    margin-top: -23%;
+    margin-left: 10%;
+    justify-content: center;
+    text-align: center;
+    max-width: 35%;
+    font-family: Oswald;
+    font-size: 20px;
+    text-shadow: 2px 2px #777777;
+    color: #FFF0F2;
+    line-height: 100%;
 }
 
-.sale-item-text{
-    font-family: Helvetica;
-    font-size: 40px;
-    font-color: #FFFFFF;
+.the-gatsby{
+    font-size: 35px;
+    font-family: Abril Fatface;
+    color: #777777;
+    text-shadow: none;
 }
 
 .sale-item-image{
-    max-width: 300px;
+    max-width: 65%;
     height: auto;
+    margin-top: -10px;
+}
+
+.sale-button{
+    margin-top: -10px;
 }
 
 #home-background-web{
@@ -55,11 +70,9 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-left: 3%;
+    margin-left: 5px;
+    margin-top: 5px;
     position: relative;
-    width: 1220px;
-
-
 }
 
 .container-home{
@@ -85,6 +98,7 @@ div.glassesImageDiv{
     font-family: Helvetica;
     font-size: 20px;
     color: #FFFFFF;
+    text-shadow: 2px 2px #777777;
 }
 
 #logo-web{
