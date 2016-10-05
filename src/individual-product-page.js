@@ -13,7 +13,7 @@ var ProductPage = React.createClass({
 
 	render(){
 		if (! this.props.product) { return null; }
-
+			//content inside modal, based on onClick event listener
 		return(
 			<div className="text-center">
 				<div className='row'>
