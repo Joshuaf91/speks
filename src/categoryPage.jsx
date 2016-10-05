@@ -3,6 +3,8 @@ import products from './data.js';
 import {Modal} from 'react-bootstrap';
 import ProductPage from './individual-product-page.js';
 import FilterBar from './FilterBar';
+import {SplitButton, MenuItem} from 'react-bootstrap';
+
 
 
 var CategoryPage = React.createClass({
@@ -83,12 +85,10 @@ var CategoryPage = React.createClass({
 						<FilterBar filterColor={this.state.filterBar[imgIndex]} />
 
 						<div className='container-fluid'>
-							<div className='col-xs-12 col-md-12 col-xl-12'>
-								<h5>Sort By:</h5>
-								<ul>
-									<li>Price</li>
-									<li>Popularity</li>
-								</ul>
+							<div className='text-right col-xs-12 col-md-12 col-xl-12'>
+								<strong>Sort By: </strong>
+									<SplitButton title="Price"></SplitButton>
+									<SplitButton title="Popularity"></SplitButton>
 							</div>
 							<div className='col-xs-12 col-md-12 col-xl-12 '>
 								{this.state.display}
