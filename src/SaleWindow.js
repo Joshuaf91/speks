@@ -7,15 +7,17 @@ var SaleWindow = React.createClass({
 
 		return(
 			
-			<div>
-				<div>
-					<p className="sale-item-text">The Gatsby</p>
-					<p className="sale-item-text">Tortoise Collection</p>
-				</div>
+			<div className="sale-window">
+					<p className="the-gatsby">The Gatsby</p>
+					<p>Tortoise Collection</p>
 
 				<div>
 					<img className="sale-item-image" src="https://s21.postimg.org/ltla2mtlz/sale_item_glasses_tortoise.png" alt="sale item" />
 				</div>
+
+				<button type="button" className="btn btn-primary btn-md sale-button">
+					SHOP
+				</button>
 
 			</div>
 		)
