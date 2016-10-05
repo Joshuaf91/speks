@@ -30,6 +30,7 @@ var Cart = React.createClass ({
         var products = this.state.products.map(function(element){
             return ( 
                     <div className="container-fluid text-center">
+
                         <div className="row">
                             <div className="col-xs-3">
                                 <img src={data[element].imgSrc[0]} alt="Product" height="50px" />
@@ -49,6 +50,16 @@ var Cart = React.createClass ({
             })
         return (
             <div>
+               
+
+                    <div id="home-background-web">
+                                <img id="category-header-web" src="https://s13.postimg.org/lqc6hrm7r/cart_header_web.jpg" alt="category" />
+                            </div>
+
+                            <div id="home-background-mobile">
+                                <img id="category-header-web" src="https://s9.postimg.org/do71kunen/cart_header_mobile.jpg" alt="category" />
+                            </div>
+
                 <h1>Shopping Cart</h1>
                 <hr />
                 <ol>
