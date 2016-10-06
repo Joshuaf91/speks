@@ -44,7 +44,7 @@ var CategoryPage = React.createClass({
 			if(this.props.params.category && products[element].material.indexOf(this.props.params.category)){
 				return undefined;
 			}else{
-				return <div key={'frames' + index} className='col-xs-12 col-sm-6 col-md-6 col-xl-6'>
+				return <div id='niceFont' key={'frames' + index} className='col-xs-12 col-sm-6 col-md-6 col-xl-6'>
 							<h5 className='text-center'>{products[element].productName} | <em>{products[element].price}</em></h5>
 
 							<img onClick={this.takeACLoserLook} className='img-responsive glassesImage' src={products[element].imgSrc[0]} alt={element} />
@@ -85,10 +85,17 @@ var CategoryPage = React.createClass({
 						<FilterBar filterColor={this.state.filterBar[imgIndex]} />
 
 						<div className='container-fluid'>
-							<div className='text-right col-xs-12 col-md-12 col-xl-12'>
+							<div className='text-center col-xs-12 col-md-12 col-xl-12'>
 								<strong>Sort By: </strong>
-									<SplitButton title="Price"></SplitButton>
-									<SplitButton title="Popularity"></SplitButton>
+									<SplitButton title="Price">
+										<MenuItem>Under $30</MenuItem>
+										<MenuItem>$30 and Above</MenuItem>
+									</SplitButton>
+									<SplitButton title="Popularity">
+										<MenuItem>Most Popular Styles</MenuItem>
+										<MenuItem>Copacetic Styles</MenuItem>
+										<MenuItem>Uncommon Styles</MenuItem>
+									</SplitButton>
 							</div>
 							<div className='col-xs-12 col-md-12 col-xl-12 '>
 								{this.state.display}
