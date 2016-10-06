@@ -32,8 +32,6 @@ var CategoryPage = React.createClass({
 
 	}, //dynamic generation of content
 	displayData: function(){
-		console.log("params",this.props.params)
-		console.log("products", products)
 		
 		var newArr = products.map((element,index) => {
 			if(element.gender.indexOf(this.props.params.gender) > -1){

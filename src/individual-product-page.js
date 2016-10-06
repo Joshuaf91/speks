@@ -1,20 +1,25 @@
-
 import React from 'react';
-import products from './data.js';
-import {Modal} from 'react-bootstrap';
 
 
 //props.product is an array where the first item is an object from data.js and the second index is the index of the first item within data.js
 var ProductPage = React.createClass({
+	getInitialState(){
+		return{value:1}
+	},
 	addToCart(){
-		this.props.changeCart(this.props.product[1])
+		var arr = [];
+		for (var i = 0; i < this.state.value; i++) {
+			arr = [...arr, this.props.product[1]];
+		}
+		this.props.changeCart(arr);
 		this.props.xButton();
 	},
-
+	selectValue(event){
+		this.setState({value:event.target.value});
+	},
 	render(){
 		if (! this.props.product) { return null; }
 			//content inside modal, based on onClick event listener
-			console.log("this is individual produc page coming to you with its props", this.props);
 		return(
 			<div className="text-center">
 				<div className='row'>
@@ -28,7 +33,7 @@ var ProductPage = React.createClass({
 					<div className='col-sm-5'><h5>Price </h5> <br />
 											{this.props.product[0].price} <span> </span>
 										
-												 <select>
+												 <select onChange={this.selectValue}>
 												 	<option value='1' >1</option>
 												 	<option value='2' >2</option>
 												 	<option value='3' >3</option>
