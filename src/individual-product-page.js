@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 
 
 //props.product is an array where the first item is an object from data.js and the second index is the index of the first item within data.js
@@ -21,7 +22,7 @@ var ProductPage = React.createClass({
 		if (! this.props.product) { return null; }
 			//content inside modal, based on onClick event listener
 		return(
-			<div className="text-center">
+			<div className="text-center" id="niceFont">
 				<div className='row'>
 					<h3 className='col-xs-10'>{this.props.product[0].productName}</h3>
 					<h3><button type="button" className="col-xs-1 btn btn-default btn-xs" onClick={this.props.xButton}>X</button></h3>
