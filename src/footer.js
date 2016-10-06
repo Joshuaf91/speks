@@ -1,6 +1,5 @@
 import React from'react';
 
-
 var Footer = React.createClass({
 
 	render: function() {
@@ -24,10 +23,10 @@ var Footer = React.createClass({
 				  
 				  <div className="col-sm-4">
 				  		<div className="cream-box-social">	
-				  			<p><i className="fa fa-twitter"></i> <span className="cream-box">TWITTER</span></p>
-				  			<p><i className="fa fa-facebook"></i> <span className="cream-box">FACEBOOK</span> </p>
-				  			<p><i className="fa fa-instagram"></i> <span className="cream-box">INSTAGRAM</span> </p>
-				  			<p><i className="fa fa-pinterest"></i> <span className="cream-box">PINTEREST</span> </p>
+				  			<p><i className="fa fa-twitter"></i> <span className="cream-box"><a target="_blank" href="https://twitter.com/C4QNYC">TWITTER</a></span></p>
+				  			<p><i className="fa fa-facebook"></i> <span className="cream-box"><a target="_blank" href="https://www.facebook.com/CoalitionForQueens/">FACEBOOK</a></span> </p>
+				  			<p><i className="fa fa-instagram"></i> <span className="cream-box"><a target="_blank" href="https://www.instagram.com/c4qnyc/">INSTAGRAM</a></span> </p>
+				  			<p><i className="fa fa-pinterest"></i> <span className="cream-box"><a target="_blank" href="https://www.c4q.nyc/volunteer">PINTEREST</a></span> </p>
 				  		</div>
 				  </div>
 
