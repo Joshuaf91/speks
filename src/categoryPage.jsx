@@ -13,7 +13,9 @@ var CategoryPage = React.createClass({
 			display:null,
 			showModal: false,
 			modalProduct: null,
-			filterBar: ["filter-click-change-genderless", "filter-click-change-women", "filter-click-change-men"]
+			filterBar: ["filter-click-change-genderless", "filter-click-change-women", "filter-click-change-men"],
+			webImgSrc: ["https://s22.postimg.org/smy6gi0xd/genderless_category_header_web.png", "https://s11.postimg.org/cj2bkaggj/women_category_header_web.jpg", "https://s12.postimg.org/ahzbsmnkt/men_category_header_web.jpg"], 
+			mobileImgSrc: ["https://s10.postimg.org/qm5xowkqh/genderless_category_header_mobile.png", "https://s16.postimg.org/pq33vk845/women_category_header_mobile.jpg", "https://s9.postimg.org/750a9umpr/men_category_header_mobile.jpg"]
 		}
 
 	},  //modal functionality, closing
@@ -27,6 +29,7 @@ var CategoryPage = React.createClass({
 			showModal: true,
 			modalProduct: [products[event.target.alt], event.target.alt]
 		}, this.displayData);
+
 	}, //dynamic generation of content
 	displayData: function(){
 		console.log("params",this.props.params)
@@ -73,16 +76,16 @@ var CategoryPage = React.createClass({
 						<div className="container-home ">
      		 				
           					<div id="home-background-web">
-								<img id="category-header-web" src={this.props.webImgSrc[imgIndex]} alt="category" />
+								<img id="category-header-web" src={this.state.webImgSrc[imgIndex]} alt="category" />
 							</div>
 
 							<div id="home-background-mobile">
-     		 					<img id="category-header-web" src={this.props.mobileImgSrc[imgIndex]} alt="category" />
+     		 					<img id="category-header-web" src={this.state.mobileImgSrc[imgIndex]} alt="category" />
 							</div>
 
 						</div>
 
-						<FilterBar filterColor={this.state.filterBar[imgIndex]} />
+						<FilterBar filterColor={this.state.filterBar[imgIndex]} gender={this.props.params.gender}/>
 
 						<div className='container-fluid'>
 							<div className='text-right col-xs-12 col-md-12 col-xl-12'>

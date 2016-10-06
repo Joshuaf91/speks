@@ -12,7 +12,7 @@ import Cart from './Cart';
 
 var App = React.createClass({
   getInitialState: function(){
-    return{cart:[], webImgSrc: ["https://s22.postimg.org/smy6gi0xd/genderless_category_header_web.png", "https://s11.postimg.org/cj2bkaggj/women_category_header_web.jpg", "https://s12.postimg.org/ahzbsmnkt/men_category_header_web.jpg"], mobileImgSrc: ["https://s10.postimg.org/qm5xowkqh/genderless_category_header_mobile.png", "https://s16.postimg.org/pq33vk845/women_category_header_mobile.jpg", "https://s9.postimg.org/750a9umpr/men_category_header_mobile.jpg"] }
+    return{cart:[]}
   },
   contextTypes: {
     router: React.PropTypes.object.isRequired
@@ -42,9 +42,7 @@ var App = React.createClass({
         <div id="app-home">
           {React.cloneElement(this.props.children, {
               cart: this.state.cart,
-              changeCart: this.changeCart, 
-              webImgSrc: this.state.webImgSrc,
-              mobileImgSrc: this.state.mobileImgSrc
+              changeCart: this.changeCart
             })}
         </div>
 
