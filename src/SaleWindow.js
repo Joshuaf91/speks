@@ -1,4 +1,5 @@
 import React from'react';
+import {Link} from 'react-router';
 
 
 var SaleWindow = React.createClass({
@@ -16,7 +17,7 @@ var SaleWindow = React.createClass({
 				</div>
 
 				<button type="button" className="btn btn-primary btn-md sale-button">
-					SHOP
+					<Link to="/CategoryPage/n/Tortoise">SHOP</Link>
 				</button>
 
 			</div>

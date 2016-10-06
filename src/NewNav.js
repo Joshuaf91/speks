@@ -35,16 +35,16 @@ var NewNav = React.createClass({
 					<Link to="/CategoryPage/m">MEN</Link>
 				</div>
 
-				<div id="nav-cart" className="nav-text" >
+				{this.props.cart.length === 0 ? null : <div id="nav-cart" className="nav-text" >
 					
-					<div id="nav-cart-word" >
+					 <div id="nav-cart-word" >
 					 <Link to="/cart">CART</Link>
 					</div>
 
 					<div id="nav-cart-icon" onClick={this.props.goToCart}>
 						<i className="icon fa fa-shopping-cart"></i> 
 					</div>
-				</div>
+				</div>}
 			</div> 
 		</div> 
 		)

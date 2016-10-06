@@ -4,7 +4,6 @@ import {Link} from 'react-router';
 var FilterBar = React.createClass({
 
 	render: function() {
-	console.log("	a;ldksgaskln;laskdgnasdl;kgnslkdgngender " + this.props.gender)
 		return(
 
 			<div id={this.props.filterColor} className="container-nav">

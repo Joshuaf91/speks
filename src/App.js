@@ -27,16 +27,14 @@ var App = React.createClass({
     this.context.router.push("/cart")
   },
   changeCart: function(index){
-    debugger;
-    var array = this.state.cart.concat(index);
+    var array = [...this.state.cart, ...index];
     this.setState({cart:array});
   },
   render: function() {
-    console.log("this is my cart",this.state.cart);
     return (
       <div id="app-width">
       	<div id="app-nav">
-          <NewNav goToCategoryPage={this.goToCategoryPage} goToCart={this.goToCart} that={this} />
+          <NewNav goToCategoryPage={this.goToCategoryPage} goToCart={this.goToCart} cart={this.state.cart} />
         </div>
         
         <div id="app-home">
