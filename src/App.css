@@ -561,3 +561,13 @@ a:hover, a:visited, a:link, a:active
     } 
 }
 
+/*modal styling*/
+#niceFont{
+    font-family: Helvetica;
+    font-size: 14px;
+    text-align: center;
+}
+
+ul.dropdown-menu li a{
+    color:black !important;
+}
